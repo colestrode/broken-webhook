@@ -5,10 +5,13 @@ let app = express();
 let port = process.env.PORT || 3000;
 let serverTimeout = process.env.SERVER_TIMEOUT || 60;
 
+app.use(require('body-parser').json());
 
 app.post('/timeout', function(req, res) {
-
-  console.log(JSON.stringify(req.body, null, 2));
+  if(Object.keys(req.body.msys).length === 0) {
+    // this lets us create the webhook
+    return res.status(200).send();
+  }
 
   console.log(`Got a POST, but I'm not doing anything with it!`);
 });
