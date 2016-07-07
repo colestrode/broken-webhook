@@ -6,7 +6,10 @@ let port = process.env.PORT || 3000;
 let serverTimeout = process.env.SERVER_TIMEOUT || 60;
 
 
-app.post('/timeout', function() {
+app.post('/timeout', function(req, res) {
+
+  console.log(JSON.stringify(req.body, null, 2));
+
   console.log(`Got a POST, but I'm not doing anything with it!`);
 });
 
