@@ -8,9 +8,9 @@ let serverTimeout = process.env.SERVER_TIMEOUT || 60;
 app.use(require('body-parser').json());
 
 app.post('/timeout', function(req, res) {
-  console.log(req.body);
+  let payload = req.body;
 
-  if(Object.keys(req.body.msys).length === 0) {
+  if(payload.length === 1 && Object.keys(payload[0].msys).length === 0) {
     // this lets us create the webhook
     return res.status(200).send();
   }
