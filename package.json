@@ -1,0 +1,23 @@
+{
+  "name": "broken-webhook",
+  "version": "1.0.0",
+  "description": "This SparkPost webhook consumer is broken to test error messages",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colestrode/broken-webhook.git"
+  },
+  "author": "Cole Furfaro-Strode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/colestrode/broken-webhook/issues"
+  },
+  "homepage": "https://github.com/colestrode/broken-webhook#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
